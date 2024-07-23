@@ -9,15 +9,14 @@ function Puzzle9() {
   const checkAnswer = () => {
     const correctAnswer = 'airspaces';
     if (answer.toLowerCase() === correctAnswer.toLowerCase()) {
-      alert('Congratulations! You have completed the treasure hunt.');
-      navigate('/');
+      navigate('/congratulations');
     } else {
       setErrorMessage("tehe, that's not the answer!");
     }
   };
 
   return (
-    <div>
+    <div className="container">
       <h1>Puzzle 9</h1>
       <p>
         Clue 9: 
@@ -35,8 +34,9 @@ function Puzzle9() {
         type="text"
         value={answer}
         onChange={(e) => setAnswer(e.target.value)}
+        className="form-control"
       />
-      <button onClick={checkAnswer}>Submit</button>
+      <button className="btn btn-primary mt-2" onClick={checkAnswer}>Submit</button>
       {errorMessage && <p style={{ color: 'red' }}>{errorMessage}</p>}
     </div>
   );

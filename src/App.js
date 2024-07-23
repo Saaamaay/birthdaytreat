@@ -10,6 +10,7 @@ import Puzzle6 from './pages/Puzzle6';
 import Puzzle7 from './pages/Puzzle7';
 import Puzzle8 from './pages/Puzzle8';
 import Puzzle9 from './pages/Puzzle9';
+import Congratulations from './pages/Congratulations';
 import './App.css'; // Import the CSS file here
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
           <Route path="/puzzle7" element={<Puzzle7 />} />
           <Route path="/puzzle8" element={<Puzzle8 />} />
           <Route path="/puzzle9" element={<Puzzle9 />} />
+          <Route path="/congratulations" element={<Congratulations />} />
         </Routes>
       </Router>
     </div>
